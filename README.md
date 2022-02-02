@@ -1,0 +1,1 @@
+This is a website that makes an etch-a-sketch like space where users can use their mouse to draw.
