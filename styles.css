@@ -1,9 +1,27 @@
 .square {
-  width: 4vw;
-  height: 4vw;
+  width: 5vw;
+  height: 5vw;
   background-color: black;
 }
 
 .firstSquare {
   display: flex;
+}
+
+.red {
+  background-color: red;
+}
+
+.canvasDiv {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+#clear-canvas {
+  width: 100px;
+  height: 50px;
 }

@@ -1,5 +1,3 @@
-const canvasDiv = document.querySelector("#canvasDiv")
-
 function createDivs () {
     for (let i = 0; i <= 15; i++) {
         const outerDiv = document.createElement("div")
@@ -11,16 +9,26 @@ function createDivs () {
         }
         canvasDiv.appendChild(outerDiv)
     }
+    const squares = document.querySelectorAll(".square")
+    squares.forEach(element =>  {
+        element.style.width = (100/15) + "vw";
+    })
 }
 
 createDivs()
 
-function colorChange () {
-
+const innerSquares = document.querySelectorAll(".square")
+for (let i=0; i <innerSquares.length; i++) {
+    let square = innerSquares[i]
+    square.addEventListener("mouseenter", function() {
+        this.classList.add("red")
+    })
 }
 
-const innerSquares = document.querySelector(".square")
-const outerSquare = document.querySelector(".firstSquare")
-
-innerSquares.addEventListener("mouseenter", colorChange())
-outerSquare.addEventListener("mouseenter", colorChange())
+const clear = document.getElementById("clear-canvas");
+clear.addEventListener("click", function() {
+    for (let i=0; i < innerSquares.length; i++) {
+        let square = innerSquares[i]
+        square.classList.remove("red")
+    }
+})
